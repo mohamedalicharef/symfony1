@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+{% block title%} Liste des apprenants{% endblock %}
+{% block body %}
+
+       {% if apprenants %}
+
+
+    <table id="apprenants" class="table table-striped">
+            <thead >
+            <tr>
+                <th>Nom</th>
+                <th>email</th>
+                <th>telephone</th>
+                <th>etat_Compte</th>
+                <th>CIN</th>
+                <th>groupe</th>
+                <th><center>Actions</center></th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for apprenant in apprenants %}
+                <tr>
+                    <td >{{apprenant.nom}}</td>
+                    <td >{{apprenant.email}}</td>
+                    <td >{{apprenant.tel()}}</td>
+                    <td >{{apprenant.etatCompte}}</td>
+                    <td >{{apprenant.cin}}</td>
+                    <td>{{ apprenant.groupe.libelle }}</td>
+                    <td ><a href="/apprenant/{{ apprenant.id }}" class="btn btn-success">Détails</a>
+                        <a href="/apprenant/delete/{{ apprenant.id }}" class="btn btn-danger"onclick="return confirm('Etes-vous sûr de supprimer cet article?');">Supprimer</a>
+                        <a href="/apprenant/edit/{{ apprenant.id }}" class="btn btn-primary">Modifier</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Aucun articles</p>
+    {% endif %}
+{% endblock %}

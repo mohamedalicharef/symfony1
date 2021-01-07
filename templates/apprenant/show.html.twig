@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+   Apprenant
+{% endblock %}
+
+{% block body %}
+    {% if apprenant %}
+
+        <h1>{{ apprenant.nom }}</h1>
+        <p>{{ apprenant.groupe.libelle }}</p>
+        <p>{{ apprenant.email }}</p>
+    {% else %}
+        <p>Pas d'apprenant</p>
+    {%  endif %}
+    <a href= "{{path('apprenant_list')  }}">Retour</a>
+{% endblock %}
+

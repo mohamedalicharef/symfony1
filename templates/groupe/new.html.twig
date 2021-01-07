@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% block title %}Ajouter groupe {% endblock %}
+{% block body %}
+    {{ form_start(f) }}
+    {{ form_widget(f) }}
+    <button type="submit" class="btn btn-success">Ajouter</button>
+
+    {{ form_end(f) }}
+{% endblock %}

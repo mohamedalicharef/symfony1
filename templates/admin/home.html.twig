@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block title %}Dashbord
+{% endblock %}
+{% block body %}
+<div class="list-group">
+     <a href="#" class="list-group-item list-group-item-action active">Users</a>
+   <a href="{{ path('admin_utilisateurs')}}" class="nav-link list-group-item list-group-item-action">Administration des Etudiants </a>
+    <a href="{{ path('admin_utilisateurs')}}" class="nav-link list-group-item list-group-item-action">Administration des Tuteurs</a>
+</div>
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active">Entités d'enseignement</a>
+    <a href="{{ path('admin_utilisateurs')}}" class="nav-link nav-link list-group-item list-group-item-action">Groupes</a>
+    <a href="{{ path('admin_utilisateurs')}}" class="nav-link nav-link list-group-item list-group-item-action">Modules</a>
+    <a href="{{ path('admin_utilisateurs')}}" class="nav-link nav-link list-group-item list-group-item-action">Video Conférence</a>
+</div>
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active">Réglages</a>
+    <a href="{{ path('admin_utilisateurs')}}" class="nav-link nav-link list-group-item list-group-item-action">Spécialité</a>
+    <a href="{{ path('admin_utilisateurs')}}" class="nav-link nav-link list-group-item list-group-item-action">Niveau scolaire</a></div>
+{% endblock %}
+
+
+

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+Article
+{% endblock %}
+
+{% block body %}
+{% if article %}
+
+            <h1>{{ article.nom }}</h1>
+             <p>{{ article.prix }}</p>
+{% else %}
+    <p>Pas d'article</p>
+    {%  endif %}
+    <a href= "/">Retour</a>
+{% endblock %}
+
+

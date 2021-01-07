@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+   Groupe
+{% endblock %}
+
+{% block body %}
+    {% if groupe %}
+
+        <h1>{{ groupe.libelle  }}</h1>
+        <p>{{ groupe.dateDebut|date("m/d/Y")}}</p>
+        <p>{{ groupe.dateFin |date("m/d/Y")}}</p>
+        <p>{{ groupe.description}}</p>
+    {% else %}
+        <p>Pas de groupe</p>
+    {%  endif %}
+    <a href= "{{path('apprenant_list')  }}">Retour</a>
+{% endblock %}
+
